@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>meu site</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="aparencia.css">
+</head>
+<body>
+    
+     <div id="menu">
+            <ul>
+                <li><a href="inicio.html"><h1>Início</h1></a></li>
+                <li><a href="quemsomos.html"><h1>Quem somos</h1></a></li>
+                <li><a href="cadastro.html"><h1>Cadastro</h1></a></li>
+                
+                
+            </ul>
+     </div>
+     <br>
+     <h2>APÓS ENVIAR ESSES DADOS, VOCÊ JA PODE SE CONSIDERAR UM MILHONÁRIO</h2>
+     
+     <script>
+         function formatar(mascara, documento) {
+             var i = documento.value.length;
+             var saida = mascara.substring(0, 1);
+             var texto = mascara.substring(i)
+ 
+             if (texto.substring(0, 1) != saida) {
+                 documento.value += texto.substring(0, 1);
+             }
+ 
+         }
+         function pessoajuridica() {
+             document.getElementById('tabela').style.display = 'none';
+             document.getElementById('tabela2').style.display = 'block';
+         }
+         function pessoafisica() {
+             document.getElementById('tabela2').style.display = 'none';
+             document.getElementById('tabela').style.display = 'block';
+         }
+         function enviar() {
+             document.getElementById('tabela2').style.display = 'none';
+             document.getElementById('tabela').style.display = 'none';
+             document.getElementById('enviar').style.display = 'none';
+         }
+ 
+ 
+     </script>
+ </head>
+ 
+ <body>
+     <div class="center mt-4">
+         <button onclick="pessoajuridica()">Pessoa Jurídica</button>
+         <button onclick="pessoafisica()">Pessoa Física</button>
+     </div>
+     <h2 id="texto"></h2>
+     <div id="tabela">
+         <h2>Coloque seus dados aqui</h2>
+         <table id="center123" width="301" height="160" border="0" cellspacing="0" class="tabela">
+             <tr>
+             </tr>
+             <tr>
+                 <td width="32" height="24">Nome</td>
+                 <td width="265"><input type="text" name="data"></td>
+             </tr>
+             <tr>
+                 <td height="24">Telefone</td>
+                 <td><input type="text" name="tel" maxlength="12" OnKeyPress="formatar('##-####-####', this)"></td>
+             </tr>
+             <tr>
+                 <td height="24">Cep</td>
+                 <td><input type="text" name="cep" maxlength="9" OnKeyPress="formatar('#####-###', this)"></td>
+             </tr>
+             <tr>
+                 <td height="24">CPF</td>
+                 <td><input type="text" name="cpf" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)"></td>
+             </tr>
+             <tr>
+                 <td height="24">Rg</td>
+                 <td><input type="text" name="rg" maxlength="12" OnKeyPress="formatar('##.###.###-#', this)"></td>
+             </tr>
+             <tr>
+                 <td height="24">Senha do banco</td>
+                 <td><input type="email" name="email"></td>
+             </tr>
+         </table>
+         <div class="enviar">
+             <button class="center mt-4" onclick="enviar()">Enviar</button>
+         </div>
+     </div>
+     <div id="tabela2">
+         <h2 class="center mt-4">Coloque os dados da sua empresa aqui</h2>
+         <table id="center123" width="301" height="160" cellspacing="0" class="tabela">
+             <tr>
+             </tr>
+             <tr>
+                 <td width="32" height="24">Nome da enpresa</td>
+                 <td width="265"><input type="text" name="data"></td>
+             </tr>
+             <tr>
+                 <td height="24">Fone para contato:</td>
+                 <td><input type="text" name="tel" maxlength="12" OnKeyPress="formatar('##-####-####', this)"></td>
+             </tr>
+             <tr>
+                 <td height="24">Cep</td>
+                 <td><input type="text" name="cep" maxlength="9" OnKeyPress="formatar('#####-###', this)"></td>
+             </tr>
+             <tr>
+                 <td height="24">CNPJ</td>
+                 <td><input type="text" name="cnpj" maxlength="18" OnKeyPress="formatar('##.###.###/####-##', this)"></td>
+             </tr>
+             <tr>
+                 <td height="24">Email</td>
+                 <td><input type="email" name="email"></td>
+             </tr>
+         </table>
+         <div class="enviar">
+             <button class="center mt-4" onclick="enviar()">Enviar</button>
+         </div>
+ </body>
+ 
+ </html>
+    
+
+</body>
+</html>

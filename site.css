@@ -1,0 +1,36 @@
+.center {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body{
+    background-image: uri(http://rapha-viadão.com/wp-content/uploads/2015/10/002ITAUagenciaFULL.jpg);
+ 
+    
+    }
+    
+    .enviar {
+        text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+    #center123 {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+   }
+
+   #tabela {
+       display: block;
+   }
+
+   #tabela2 {
+       display: none;
+   }
+
+   #texto {
+       text-align: center;
+   }
+  
